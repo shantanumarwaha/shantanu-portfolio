@@ -51,7 +51,7 @@ export const careerRoadmap = [
   {
     index: "02",
     period: "2025 — 2027",
-    role: "MBA Candidate",
+    role: "Candidate, Full-Time Program",
     org: "UNC Kenan-Flagler Business School",
     description:
       "Concentrating in Strategy & Consulting, Entrepreneurship, and Technology Innovation. UNC Wittman Centennial Merit Fellow. EVP – Finance for the Consulting Club, leading budgets and strategic planning for treks and labs.",
@@ -59,7 +59,7 @@ export const careerRoadmap = [
   {
     index: "03",
     period: "Summer 2026",
-    role: "MBA Intern, Commercial Strategy",
+    role: "Commercial Strategy Intern",
     org: "Solenis",
     description:
       "Led market sizing across North America, Europe, APAC, Emerging Markets, and LATAM for a $7.3B specialty chemicals manufacturer, identifying strategic white spaces to support a 3x revenue growth roadmap.",
