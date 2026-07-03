@@ -1,9 +1,29 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { navLinks, profile } from "@/lib/content";
 
 export default function Nav() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setVisible(window.scrollY > window.innerHeight * 0.6);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-background/95 backdrop-blur">
+    <header
+      className={`fixed top-0 z-50 w-full border-b border-line bg-background/95 backdrop-blur transition-all duration-300 ${
+        visible
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none -translate-y-full opacity-0"
+      }`}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10">
         <Link
           href="#top"
