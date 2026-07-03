@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Newsreader } from "next/font/google";
+import { Carlito, Inter, Newsreader } from "next/font/google";
 import { profile } from "@/lib/content";
 import "./globals.css";
 
@@ -12,6 +12,15 @@ const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
   style: ["normal", "italic"],
+});
+
+// Calibri itself isn't licensed for web embedding; Carlito is the
+// metric-compatible open-source substitute, so it renders identically
+// when the visitor doesn't have Calibri installed locally.
+const carlito = Carlito({
+  variable: "--font-carlito",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${newsreader.variable} h-full antialiased`}
+      className={`${inter.variable} ${newsreader.variable} ${carlito.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
