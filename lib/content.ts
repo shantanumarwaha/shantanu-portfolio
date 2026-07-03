@@ -31,15 +31,23 @@ export const navLinks = [
 export const executiveSummary = {
   label: "Executive Summary",
   paragraphs: [
-    "I've intentionally spent the last six years building the skills required to become an entrepreneur — across private equity consulting, business operations, growth strategy, and AI product development. I've seen firsthand how businesses are evaluated, built, and scaled, and I'm now focused on putting that foundation to work building and growing a company from the inside.",
-    "At Grant Thornton, I advised global private equity and venture capital investors across 300+ deals and $2B in investment decisions, evaluating businesses across technology, healthcare, financial services, consumer, and industrial sectors. In parallel, I built and operated a profitable short-term rental venture in India, and more recently built an AI-powered market intelligence MVP as part of my MBA at UNC Kenan-Flagler.",
+    "MBA candidate at UNC Kenan-Flagler Business School with experience across private equity consulting, commercial strategy, and entrepreneurship. My work has focused on helping investors and businesses make strategic decisions through commercial due diligence, market analysis, growth strategy, and technology-enabled problem solving.",
+    "Today, I am building on that foundation through strategy consulting projects and AI-driven business initiatives while preparing for a career in management consulting.",
   ],
-  stats: [
-    { value: "$2B+", label: "Investment decisions advised" },
-    { value: "300+", label: "Deals evaluated across sectors" },
-    { value: "$35K", label: "Annual revenue built and operated" },
-    { value: "200%+", label: "Returns vs. long-term rentals" },
-    { value: "75+", label: "Guests hosted from 8 countries" },
+  metrics: [
+    { value: "$2B+", label: "Investment decisions supported" },
+    { value: "300+", label: "Deals evaluated" },
+    { value: "20+", label: "PE funds advised" },
+    { value: "6", label: "Years across PE, strategy & entrepreneurship" },
+  ],
+  industries: [
+    "FinTech",
+    "Artificial Intelligence",
+    "Retail",
+    "Healthcare",
+    "D2C / Consumer",
+    "SaaS",
+    "Industrials / Chemicals",
   ],
 };
 
