@@ -2,25 +2,33 @@ import { profile } from "@/lib/content";
 
 export default function Hero() {
   return (
-    <section id="top" className="border-b-2 border-line bg-background">
-      <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:px-10 md:pt-28 md:pb-32">
-        <p className="mb-6 text-xs tracking-[0.2em] text-accent uppercase">
-          {profile.tagline}
-        </p>
-        <h1 className="max-w-4xl font-display text-4xl leading-[1.1] font-normal text-balance sm:text-5xl md:text-6xl">
-          {profile.headline}
+    <section
+      id="top"
+      className="flex h-screen min-h-screen flex-col items-center justify-center bg-white px-6 text-center text-black"
+    >
+      <div className="animate-fade-in-up mx-auto flex max-w-3xl flex-col items-center">
+        <h1 className="font-sans text-5xl font-semibold tracking-tight text-black sm:text-6xl md:text-7xl">
+          {profile.name}
         </h1>
-        <p className="mt-8 max-w-xl text-base leading-relaxed text-muted md:text-lg">
-          {profile.subhead}
+
+        <p className="mt-6 text-lg text-neutral-600 sm:text-xl">
+          {profile.subtitle}
         </p>
+
+        <p className="mt-4 text-sm tracking-wide text-neutral-500 sm:text-base">
+          {profile.expertise}
+        </p>
+
+        <p className="mt-8 max-w-xl text-base leading-relaxed text-neutral-700 sm:text-lg">
+          {profile.statement}
+        </p>
+
         <a
-          href="#contact"
-          className="group mt-12 inline-flex items-center gap-3 border-b border-accent pb-1 text-sm tracking-wide text-foreground"
+          href="#executive-summary"
+          className="mt-14 inline-flex items-center gap-2 text-sm tracking-wide text-carolina-blue transition-opacity hover:opacity-70"
         >
-          Let&apos;s talk
-          <span className="transition-transform group-hover:translate-x-1">
-            &rarr;
-          </span>
+          Explore Portfolio
+          <span aria-hidden>↓</span>
         </a>
       </div>
     </section>

@@ -8,11 +8,10 @@ const basePath = process.env.GITHUB_PAGES === "true" ? "/shantanu-portfolio" : "
 
 export const profile = {
   name: "Shantanu Marwaha",
-  tagline: "MBA Candidate, UNC Kenan-Flagler — Class of 2027",
-  headline:
-    "From due diligence to decision-making — I turn complexity into clarity.",
-  subhead:
-    "MBA candidate at UNC Kenan-Flagler Business School with a track record advising $2B+ in investment decisions across private equity, strategy, and technology-enabled problem solving. Preparing for a career in management consulting.",
+  subtitle: "MBA Candidate | UNC Kenan-Flagler Business School",
+  expertise: "Private Equity Consulting • Growth Strategy • AI & Business Innovation",
+  statement:
+    "Helping investors and businesses make strategic decisions through commercial due diligence, market intelligence, growth strategy, and AI-driven innovation.",
   email: "shantanumarwaha@gmail.com",
   linkedin: "https://www.linkedin.com/in/shantanu-marwaha/",
   resumeUrl: `${basePath}/resume.pdf`,

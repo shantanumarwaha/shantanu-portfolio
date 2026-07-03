@@ -16,7 +16,7 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   title: `${profile.name} — Portfolio`,
-  description: profile.subhead,
+  description: profile.statement,
 };
 
 export default function RootLayout({
