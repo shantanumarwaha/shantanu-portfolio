@@ -10,9 +10,9 @@ export const profile = {
   name: "Shantanu Marwaha",
   tagline: "MBA Candidate, UNC Kenan-Flagler — Class of 2027",
   headline:
-    "Six years evaluating, building, and scaling businesses. Now doing it from the inside.",
+    "From due diligence to decision-making — I turn complexity into clarity.",
   subhead:
-    "I've spent six years across private equity consulting, business operations, growth strategy, and AI product development — advising on $2B+ in investment decisions while building a profitable venture from scratch. I'm now focused on putting that foundation to work building and scaling a company from within.",
+    "MBA candidate at UNC Kenan-Flagler Business School with a track record advising $2B+ in investment decisions across private equity, strategy, and technology-enabled problem solving. Preparing for a career in management consulting.",
   email: "shantanumarwaha@gmail.com",
   linkedin: "https://www.linkedin.com/in/shantanu-marwaha/",
   resumeUrl: `${basePath}/resume.pdf`,
