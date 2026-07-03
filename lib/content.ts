@@ -39,6 +39,9 @@ export const executiveSummary = {
     { value: "300+", label: "Deals evaluated" },
     { value: "20+", label: "PE funds advised" },
     { value: "6", label: "Years across PE, strategy & entrepreneurship" },
+    { value: "$35K", label: "Annual revenue built and operated" },
+    { value: "200%+", label: "Returns vs. long-term rentals" },
+    { value: "75+", label: "Guests hosted from 8 countries" },
   ],
   industries: [
     "FinTech",
