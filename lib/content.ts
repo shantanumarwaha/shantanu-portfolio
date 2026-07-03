@@ -4,7 +4,8 @@
 
 // GitHub Pages serves this site from a /shantanu-portfolio subpath, so
 // hardcoded links to files in `public/` need that prefix at build time.
-const basePath = process.env.GITHUB_PAGES === "true" ? "/shantanu-portfolio" : "";
+export const basePath =
+  process.env.GITHUB_PAGES === "true" ? "/shantanu-portfolio" : "";
 
 export const profile = {
   name: "Shantanu Marwaha",

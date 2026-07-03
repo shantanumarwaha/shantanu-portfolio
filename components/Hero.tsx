@@ -1,15 +1,14 @@
-import { profile } from "@/lib/content";
+import { basePath, profile } from "@/lib/content";
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex h-screen min-h-screen items-center justify-center overflow-hidden bg-background px-6 text-center"
+      className="relative flex h-screen min-h-screen items-center justify-center overflow-hidden bg-background bg-cover bg-center px-6 text-center"
+      style={{ backgroundImage: `url(${basePath}/hero-bg.svg)` }}
     >
-      {/* Decorative background: soft orbs + dot grid, purely visual */}
+      {/* Decorative dot grid, layered on top of the background image */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute -top-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-gradient-to-br from-white/10 to-transparent blur-3xl" />
-        <div className="absolute -right-48 -bottom-48 h-[32rem] w-[32rem] rounded-full bg-gradient-to-tl from-white/[0.07] to-transparent blur-3xl" />
         <div className="bg-dot-grid absolute top-0 right-0 h-1/2 w-1/2 [mask-image:radial-gradient(ellipse_at_top_right,black,transparent_70%)]" />
       </div>
 
