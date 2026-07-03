@@ -2,6 +2,10 @@
 // All copy on the site lives here. Update this file to change any text.
 // ---------------------------------------------------------------------------
 
+// GitHub Pages serves this site from a /shantanu-portfolio subpath, so
+// hardcoded links to files in `public/` need that prefix at build time.
+const basePath = process.env.GITHUB_PAGES === "true" ? "/shantanu-portfolio" : "";
+
 export const profile = {
   name: "Shantanu Marwaha",
   tagline: "MBA Candidate, UNC Kenan-Flagler — Class of 2027",
@@ -11,7 +15,7 @@ export const profile = {
     "I've spent six years across private equity consulting, business operations, growth strategy, and AI product development — advising on $2B+ in investment decisions while building a profitable venture from scratch. I'm now focused on putting that foundation to work building and scaling a company from within.",
   email: "shantanumarwaha@gmail.com",
   linkedin: "https://www.linkedin.com/in/shantanu-marwaha/",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: `${basePath}/resume.pdf`,
   location: "Chapel Hill, NC",
   workAuthorization: "Authorized to work in the U.S. — STEM OPT through May 2030",
 };
