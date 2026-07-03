@@ -1,17 +1,16 @@
 import { profile } from "@/lib/content";
+import SectionHeading from "./SectionHeading";
 
 export default function Footer() {
   return (
     <footer id="contact" className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
-        <p className="mb-6 text-xs tracking-[0.2em] text-accent uppercase">
-          Contact
-        </p>
+      <div className="mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
+        <SectionHeading index="05" label="Contact" />
         <h2 className="max-w-2xl font-display text-4xl leading-[1.1] font-normal text-balance sm:text-5xl">
           Let&apos;s talk about what&apos;s next.
         </h2>
 
-        <div className="mt-12 flex flex-col gap-6 border-t border-line pt-10 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-6 border-t-2 border-line pt-10 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col gap-2 text-sm text-muted sm:flex-row sm:gap-8">
             <a
               href={`mailto:${profile.email}`}

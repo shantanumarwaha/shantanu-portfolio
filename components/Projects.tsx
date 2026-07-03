@@ -1,12 +1,11 @@
 import { projects } from "@/lib/content";
+import SectionHeading from "./SectionHeading";
 
 export default function Projects() {
   return (
-    <section id="projects" className="border-b border-line bg-background">
-      <div className="mx-auto max-w-6xl px-6 pt-20 md:px-10 md:pt-28">
-        <p className="mb-6 text-xs tracking-[0.2em] text-accent uppercase">
-          Projects &amp; Flagship Cases
-        </p>
+    <section id="projects" className="border-b-2 border-line bg-background">
+      <div className="mx-auto max-w-6xl px-6 pt-28 md:px-10 md:pt-36">
+        <SectionHeading index="04" label="Projects & Flagship Cases" />
       </div>
 
       <div>
@@ -15,7 +14,7 @@ export default function Projects() {
           return (
             <div
               key={project.index}
-              className={`border-t border-line ${
+              className={`border-t-2 border-line ${
                 dark ? "bg-background text-foreground" : "bg-panel text-panel-foreground"
               }`}
             >

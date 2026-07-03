@@ -42,38 +42,14 @@ export const executiveSummary = {
 export const careerRoadmap = [
   {
     index: "01",
-    period: "2019 — Present",
-    role: "Founder & Operator",
-    org: "Airbnb Short-Term Rental Business, India",
+    period: "2021 — 2025",
+    role: "Private Equity & Risk Consulting",
+    org: "Grant Thornton, New Delhi",
     description:
-      "Built and scaled a short-term rental business from the ground up alongside a full-time consulting career — owning pricing strategy, customer acquisition, and guest experience. Grew to ~$35K in annual revenue with 200%+ returns vs. long-term rentals and 75+ guests from 8 countries.",
+      "Advised 20+ global private equity funds across 300+ deals and $2B in investment decisions. Directed due diligence that reshaped outcomes — an 11% valuation renegotiation on a $229M SaaS deal, $400K in financial irregularities uncovered on a healthcare acquisition (17% lower valuation), a branch restructuring on a $76M housing finance deal (-19% loan defaults), and a $183M deal an investor withdrew from after a reputational-risk finding.",
   },
   {
     index: "02",
-    period: "2021 — 2022",
-    role: "Associate",
-    org: "Grant Thornton, New Delhi",
-    description:
-      "Directed risk analysis for a $229M B2B SaaS deal, identifying regulatory compliance lapses across North America, EMEA, and APAC that compelled the client to renegotiate valuation by 11%.",
-  },
-  {
-    index: "03",
-    period: "2022 — 2023",
-    role: "Senior Associate",
-    org: "Grant Thornton, New Delhi",
-    description:
-      "Led commercial and integrity due diligence across multiple PE deals — restructuring underperforming branches on a $76M housing finance deal (-19% loan defaults) and surfacing reputational risk that led an investor to withdraw from a $183M healthcare deal.",
-  },
-  {
-    index: "04",
-    period: "2023 — 2025",
-    role: "Consultant, Private Equity & Risk Consulting",
-    org: "Grant Thornton, New Delhi",
-    description:
-      "Advised 20+ global PE funds across 300+ deals and $2B in go/no-go investment decisions. Uncovered $400K in financial irregularities on a healthcare acquisition, leading to a 17% lower valuation, and strengthened credit controls on a $98.3M fintech deal.",
-  },
-  {
-    index: "05",
     period: "2025 — 2027",
     role: "MBA Candidate",
     org: "UNC Kenan-Flagler Business School",
@@ -81,7 +57,7 @@ export const careerRoadmap = [
       "Concentrating in Strategy & Consulting, Entrepreneurship, and Technology Innovation. UNC Wittman Centennial Merit Fellow. EVP – Finance for the Consulting Club, leading budgets and strategic planning for treks and labs.",
   },
   {
-    index: "06",
+    index: "03",
     period: "Summer 2026",
     role: "MBA Intern, Commercial Strategy",
     org: "Solenis",
