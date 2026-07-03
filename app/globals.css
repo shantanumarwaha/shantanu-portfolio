@@ -58,11 +58,3 @@ body {
 .animate-fade-in-up {
   animation: fade-in-up 0.9s ease-out both;
 }
-
-.bg-dot-grid {
-  background-image: radial-gradient(
-    rgba(243, 239, 231, 0.18) 1px,
-    transparent 1px
-  );
-  background-size: 22px 22px;
-}
