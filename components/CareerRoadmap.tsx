@@ -54,7 +54,7 @@ function RoadmapItem({
 
 export default function CareerRoadmap() {
   return (
-    <section id="career-roadmap" className="border-b-2 border-line bg-background">
+    <section id="career-roadmap" className="bg-theme border-b-2 border-line">
       <div className="mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
         <SectionHeading index="02" label="Career Roadmap" />
         {careerRoadmap.map((step, i) => (

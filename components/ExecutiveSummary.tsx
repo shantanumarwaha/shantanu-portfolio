@@ -21,7 +21,7 @@ function MetricCard({
   description: string;
 }) {
   return (
-    <div className="group rounded-[22px] border border-white/10 bg-white/[0.04] p-8 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-white/25 sm:p-9">
+    <div className="glow-card rounded-[22px] bg-white/[0.04] p-8 shadow-lg backdrop-blur-md transition-transform duration-300 hover:-translate-y-1.5 sm:p-9">
       <p className="font-display text-[56px] leading-none text-foreground sm:text-[64px]">
         {value}
       </p>
@@ -46,9 +46,9 @@ const industryIcons: Record<string, LucideIcon> = {
 function IndustryCard({ name }: { name: string }) {
   const Icon = industryIcons[name];
   return (
-    <div className="group flex min-h-[120px] flex-col justify-center gap-4 rounded-[22px] border border-white/10 bg-white/[0.04] p-7 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:shadow-[0_0_32px_rgba(75,156,211,0.18)]">
-      <Icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
-      <p className="text-base font-medium text-foreground/90">{name}</p>
+    <div className="glow-card flex w-full min-h-[130px] flex-col items-center justify-center gap-4 rounded-[22px] bg-white/[0.04] p-8 text-center shadow-lg backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 sm:w-[calc(50%-0.625rem)] lg:w-[calc(25%-0.9375rem)]">
+      <Icon className="h-10 w-10 text-accent" strokeWidth={1.5} />
+      <p className="text-lg font-medium text-foreground/90">{name}</p>
     </div>
   );
 }
@@ -57,7 +57,7 @@ export default function ExecutiveSummary() {
   return (
     <section
       id="executive-summary"
-      className="border-b-2 border-line bg-background"
+      className="bg-theme border-b-2 border-line"
     >
       <div className="mx-auto max-w-[1480px] px-6 py-28 md:px-12 md:py-40">
         <SectionHeading index="01" label={executiveSummary.label} />
@@ -89,14 +89,12 @@ export default function ExecutiveSummary() {
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="border-t border-line">
-        <div className="mx-auto max-w-[1480px] px-6 py-24 md:px-12 md:py-28">
-          <h3 className="text-xs tracking-[0.2em] text-muted uppercase">
+        <div className="mt-20 md:mt-28">
+          <h3 className="text-center text-xs tracking-[0.2em] text-muted uppercase">
             {executiveSummary.industriesLabel}
           </h3>
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 flex flex-wrap justify-center gap-5">
             {executiveSummary.industries.map((industry) => (
               <IndustryCard key={industry} name={industry} />
             ))}

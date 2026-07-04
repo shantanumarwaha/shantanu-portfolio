@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function Projects() {
   return (
-    <section id="projects" className="border-b-2 border-line bg-background">
+    <section id="projects" className="bg-theme border-b-2 border-line">
       <div className="mx-auto max-w-6xl px-6 pt-28 md:px-10 md:pt-36">
         <SectionHeading index="04" label="Projects & Flagship Cases" />
       </div>

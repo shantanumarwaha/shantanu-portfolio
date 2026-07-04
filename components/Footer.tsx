@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-background">
+    <footer id="contact" className="bg-theme">
       <div className="mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
         <SectionHeading index="05" label="Contact" />
         <h2 className="max-w-2xl font-display text-4xl leading-[1.1] font-normal text-balance sm:text-5xl">
