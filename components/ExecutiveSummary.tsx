@@ -57,7 +57,7 @@ export default function ExecutiveSummary() {
   return (
     <section
       id="executive-summary"
-      className="bg-theme relative flex min-h-screen flex-col justify-center overflow-hidden border-b-2 border-line"
+      className="bg-theme sticky top-0 z-10 flex min-h-screen flex-col justify-center overflow-hidden border-b-2 border-line"
     >
       <div
         aria-hidden

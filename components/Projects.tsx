@@ -3,7 +3,10 @@ import SectionHeading from "./SectionHeading";
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-theme border-b-2 border-line">
+    <section
+      id="projects"
+      className="bg-theme sticky top-0 z-30 border-b-2 border-line"
+    >
       <div className="relative overflow-hidden">
         <div
           aria-hidden
