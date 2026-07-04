@@ -1,10 +1,15 @@
-import { profile } from "@/lib/content";
+import { basePath, profile } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-theme">
-      <div className="mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
+    <footer id="contact" className="bg-theme relative overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-16 -left-16 h-[320px] w-[460px] scale-y-[-1] bg-contain bg-left-bottom bg-no-repeat opacity-55"
+        style={{ backgroundImage: `url(${basePath}/wave-lines-b.svg)` }}
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
         <SectionHeading index="05" label="Contact" />
         <h2 className="max-w-2xl font-display text-4xl leading-[1.1] font-normal text-balance sm:text-5xl">
           Let&apos;s talk about what&apos;s next.

@@ -73,20 +73,16 @@ body {
 }
 
 /* Recurring theme motif echoing the cover background: soft corner glows
-   (blue + warm gold, matching the sphere rim lights) plus a faint grid line pattern. */
+   (blue + warm gold, matching the sphere rim lights). Sections layer their
+   own bounded wave-line accent on top of this — see components using
+   wave-lines-a.svg / wave-lines-b.svg — rather than tiling a pattern
+   across the whole page. */
 .bg-theme {
   background-color: var(--background);
   background-image:
     radial-gradient(circle 620px at 4% -6%, rgba(75, 156, 211, 0.1), transparent 62%),
-    radial-gradient(circle 680px at 102% 108%, rgba(232, 201, 138, 0.08), transparent 62%),
-    linear-gradient(rgba(243, 239, 231, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(243, 239, 231, 0.08) 1px, transparent 1px);
-  background-size:
-    auto,
-    auto,
-    44px 44px,
-    44px 44px;
-  background-repeat: no-repeat, no-repeat, repeat, repeat;
+    radial-gradient(circle 680px at 102% 108%, rgba(232, 201, 138, 0.08), transparent 62%);
+  background-repeat: no-repeat;
 }
 
 .glow-card {

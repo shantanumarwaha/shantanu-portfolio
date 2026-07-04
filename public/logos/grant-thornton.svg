@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="gt1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9a8e0"/>
+      <stop offset="100%" stop-color="#8a5cb8"/>
+    </linearGradient>
+    <linearGradient id="gt2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9b6bc4"/>
+      <stop offset="100%" stop-color="#5e3a94"/>
+    </linearGradient>
+    <linearGradient id="gt3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6f4498"/>
+      <stop offset="100%" stop-color="#3c2168"/>
+    </linearGradient>
+    <linearGradient id="gt4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b083cf"/>
+      <stop offset="100%" stop-color="#71469e"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="M 60,60 C 60,32 48,18 60,10 C 78,18 82,42 60,60 Z" fill="url(#gt1)"/>
+    <path d="M 60,60 C 88,60 102,48 110,60 C 102,78 78,82 60,60 Z" fill="url(#gt2)"/>
+    <path d="M 60,60 C 60,88 72,102 60,110 C 42,102 38,78 60,60 Z" fill="url(#gt3)"/>
+    <path d="M 60,60 C 32,60 18,72 10,60 C 18,42 42,38 60,60 Z" fill="url(#gt4)"/>
+    <circle cx="60" cy="60" r="9" fill="#0a0a09"/>
+  </g>
+</svg>
