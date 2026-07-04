@@ -17,13 +17,12 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/shantanu-marwaha/",
   resumeUrl: `${basePath}/resume.pdf`,
   location: "Chapel Hill, NC",
-  workAuthorization: "Authorized to work in the U.S. — STEM OPT through May 2030",
+  workAuthorization: "Authorized to work in the U.S. (STEM OPT through May 2030)",
 };
 
 export const navLinks = [
   { label: "Executive Summary", href: "#executive-summary" },
   { label: "Career Roadmap", href: "#career-roadmap" },
-  { label: "Goals", href: "#goals" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
@@ -55,14 +54,14 @@ export const executiveSummary = {
 export const careerRoadmap = [
   {
     id: "airbnb",
-    company: "Airbnb",
+    company: "Airbnb Rental Properties",
     logo: "airbnb.svg",
     role: "Founder & Operator",
     period: "2019 – 2025",
     companyDescription:
       "Independent short-term rental venture, built and operated alongside a full-time consulting career.",
     roleOverview:
-      "Built and scaled a short-term rental business from scratch — owning pricing strategy, customer acquisition, and guest experience for guests from 8 countries, entirely alongside a full-time consulting career.",
+      "Built and scaled a short-term rental business from scratch, owning pricing strategy, customer acquisition, and guest experience for guests from 8 countries, entirely alongside a full-time consulting career.",
     metrics: [
       { value: "$35K", label: "Annual Revenue" },
       { value: "200%+", label: "Return vs. Long-Term Rental" },
@@ -82,7 +81,7 @@ export const careerRoadmap = [
       "Competitive Intelligence",
     ],
     takeaway:
-      "Learned to own outcomes end-to-end — planting the seed for a career built on more than advisory work.",
+      "Learned to own outcomes end-to-end, planting the seed for a career built on more than advisory work.",
   },
   {
     id: "grant-thornton",
@@ -172,30 +171,9 @@ export const careerRoadmap = [
       "Competitive Intelligence",
     ],
     takeaway:
-      "Applied consulting rigor to real commercial strategy decisions at global scale — the clearest bridge yet to management consulting.",
+      "Applied consulting rigor to real commercial strategy decisions at global scale, the clearest bridge yet to management consulting.",
   },
 ];
-
-export const goals = {
-  label: "Goals",
-  headline: "From evaluating businesses to building one of my own.",
-  shortTerm: {
-    title: "Short-term (post-MBA)",
-    items: [
-      "Land a strategy, consulting, or venture-backed operating role that builds hands-on execution experience beyond advisory work.",
-      "Go deeper on entrepreneurship-through-acquisition and growth strategy — the bridge between evaluating businesses and running one.",
-      "Keep building at the intersection of AI and business strategy, extending the market-intelligence work started at LeO.",
-    ],
-  },
-  longTerm: {
-    title: "Long-term",
-    items: [
-      "Build and scale a company from the inside, owning outcomes rather than advising on them.",
-      "Combine six years of deal evaluation experience with hands-on operating and AI product experience to found or lead a high-growth venture.",
-      "Apply consulting rigor with entrepreneurial ownership — evaluate, build, scale.",
-    ],
-  },
-};
 
 export const projects = [
   {
@@ -203,7 +181,7 @@ export const projects = [
     title: "AI-Powered Market Intelligence MVP",
     result: "Automated research across 45+ competitors and 30,000+ stakeholder surveys",
     description:
-      "Built an AI-powered market intelligence and M&A screening MVP for LeO, a $380M PE-backed facilities maintenance platform — turning weeks of manual research into an on-demand tool and running survey analytics across 30,000+ stakeholders to shape pricing and go-to-market strategy.",
+      "Built an AI-powered market intelligence and M&A screening MVP for LeO, a $380M PE-backed facilities maintenance platform, turning weeks of manual research into an on-demand tool and running survey analytics across 30,000+ stakeholders to shape pricing and go-to-market strategy.",
     tags: ["AI/ML", "MBA Consulting Project"],
   },
   {
@@ -224,10 +202,10 @@ export const projects = [
   },
   {
     index: "04",
-    title: "Airbnb Venture — Founder & Operator",
+    title: "Airbnb Rental Properties: Founder & Operator",
     result: "$35K annual revenue, 200%+ returns vs. long-term rentals",
     description:
-      "Built and scaled a short-term rental business from scratch alongside a full-time consulting career — owning pricing strategy, customer acquisition, and guest experience for 75+ guests from 8 countries.",
+      "Built and scaled a short-term rental business from scratch alongside a full-time consulting career, owning pricing strategy, customer acquisition, and guest experience for 75+ guests from 8 countries.",
     tags: ["Entrepreneurship", "Operations"],
   },
 ];

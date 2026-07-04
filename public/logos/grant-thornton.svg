@@ -1,27 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
   <defs>
-    <linearGradient id="gt1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="gt1" x1="10%" y1="0%" x2="90%" y2="100%">
       <stop offset="0%" stop-color="#c9a8e0"/>
-      <stop offset="100%" stop-color="#8a5cb8"/>
+      <stop offset="100%" stop-color="#9d6fc4"/>
     </linearGradient>
-    <linearGradient id="gt2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9b6bc4"/>
+    <linearGradient id="gt2" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#8a5cb8"/>
       <stop offset="100%" stop-color="#5e3a94"/>
     </linearGradient>
-    <linearGradient id="gt3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6f4498"/>
-      <stop offset="100%" stop-color="#3c2168"/>
+    <linearGradient id="gt3" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#5e3a94"/>
+      <stop offset="100%" stop-color="#37205f"/>
     </linearGradient>
-    <linearGradient id="gt4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#b083cf"/>
+    <linearGradient id="gt4" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#a578cc"/>
       <stop offset="100%" stop-color="#71469e"/>
     </linearGradient>
   </defs>
   <g>
-    <path d="M 60,60 C 60,32 48,18 60,10 C 78,18 82,42 60,60 Z" fill="url(#gt1)"/>
-    <path d="M 60,60 C 88,60 102,48 110,60 C 102,78 78,82 60,60 Z" fill="url(#gt2)"/>
-    <path d="M 60,60 C 60,88 72,102 60,110 C 42,102 38,78 60,60 Z" fill="url(#gt3)"/>
-    <path d="M 60,60 C 32,60 18,72 10,60 C 18,42 42,38 60,60 Z" fill="url(#gt4)"/>
-    <circle cx="60" cy="60" r="9" fill="#0a0a09"/>
+    <path d="M 60,60 C 60,24 42,12 60,6 C 92,10 100,40 82,54 C 74,60 66,61 60,60 Z" fill="url(#gt1)"/>
+    <path d="M 60,60 C 96,60 108,42 114,60 C 110,92 80,100 66,82 C 60,74 59,66 60,60 Z" fill="url(#gt2)"/>
+    <path d="M 60,60 C 60,96 78,108 60,114 C 28,110 20,80 38,66 C 46,60 54,59 60,60 Z" fill="url(#gt3)"/>
+    <path d="M 60,60 C 24,60 12,78 6,60 C 10,28 40,20 54,38 C 60,46 61,54 60,60 Z" fill="url(#gt4)"/>
   </g>
 </svg>

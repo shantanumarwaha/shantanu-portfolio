@@ -2,17 +2,21 @@ type SectionHeadingProps = {
   index: string;
   label: string;
   tone?: "dark" | "light";
+  compact?: boolean;
 };
 
 export default function SectionHeading({
   index,
   label,
   tone = "dark",
+  compact = false,
 }: SectionHeadingProps) {
   const mutedClass = tone === "dark" ? "text-muted" : "text-muted-panel";
 
   return (
-    <div className="mb-14 flex items-baseline gap-4 md:mb-20">
+    <div
+      className={`flex items-baseline gap-4 ${compact ? "mb-8 md:mb-10" : "mb-14 md:mb-20"}`}
+    >
       <span className="font-display text-3xl text-accent md:text-4xl">
         {index}
       </span>
