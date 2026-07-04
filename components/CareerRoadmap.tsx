@@ -11,17 +11,14 @@ function CompanyLogo({
   logo,
   company,
   active,
-  size = "md",
 }: {
   logo: string;
   company: string;
   active: boolean;
-  size?: "md" | "lg";
 }) {
-  const dims = size === "lg" ? "h-16 w-16 p-3" : "h-14 w-14 p-2.5";
   return (
     <div
-      className={`flex shrink-0 items-center justify-center rounded-xl bg-white/95 shadow-lg transition-all duration-300 ${dims} ${
+      className={`flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-white/95 p-3.5 shadow-lg transition-all duration-300 ${
         active ? "ring-2 ring-accent/70" : "ring-1 ring-white/10"
       }`}
     >
@@ -47,7 +44,7 @@ function MilestoneButton({
     <button
       type="button"
       onClick={onSelect}
-      className={`glow-card flex w-full flex-col items-center gap-2.5 rounded-2xl bg-white/[0.03] px-3 py-4 text-center transition-all duration-300 ${
+      className={`glow-card flex w-full flex-col items-center gap-2.5 rounded-2xl bg-white/[0.03] px-4 py-5 text-center transition-all duration-300 ${
         active
           ? "border-accent/60 shadow-[0_0_30px_-6px_rgba(75,156,211,0.5)]"
           : "border-transparent opacity-70 shadow-none hover:opacity-100"
@@ -56,12 +53,12 @@ function MilestoneButton({
       <CompanyLogo logo={step.logo} company={step.company} active={active} />
       <div>
         <p
-          className={`font-display text-base ${active ? "text-foreground" : "text-foreground/80"}`}
+          className={`font-display text-lg ${active ? "text-foreground" : "text-foreground/80"}`}
         >
           {step.company}
         </p>
-        <p className="mt-0.5 text-xs text-muted">{step.role}</p>
-        <p className="mt-0.5 text-[11px] tracking-wide text-accent uppercase">
+        <p className="mt-1 text-sm text-muted">{step.role}</p>
+        <p className="mt-1 text-xs tracking-wide text-accent uppercase">
           {step.period}
         </p>
       </div>
@@ -72,10 +69,8 @@ function MilestoneButton({
 function MetricCard({ value, label }: { value: string; label: string }) {
   return (
     <div className="glow-card rounded-xl bg-white/[0.04] p-4 shadow-lg backdrop-blur-md">
-      <p className="font-display text-2xl text-foreground sm:text-[26px]">
-        {value}
-      </p>
-      <p className="mt-1.5 text-[10px] font-medium tracking-[0.08em] text-muted uppercase">
+      <p className="font-display text-3xl text-foreground">{value}</p>
+      <p className="mt-1.5 text-xs font-medium tracking-[0.08em] text-muted uppercase">
         {label}
       </p>
     </div>
@@ -84,45 +79,40 @@ function MetricCard({ value, label }: { value: string; label: string }) {
 
 function DetailPanel({ step }: { step: Step }) {
   return (
-    <div key={step.id} className="animate-fade-in mt-8">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <CompanyLogo
-          logo={step.logo}
-          company={step.company}
-          active
-          size="lg"
-        />
+    <div key={step.id} className="animate-fade-in mt-2">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+        <CompanyLogo logo={step.logo} company={step.company} active />
         <div>
-          <h3 className="font-display text-2xl leading-tight md:text-3xl">
+          <h3 className="font-display text-3xl leading-tight md:text-4xl">
             {step.company}
           </h3>
-          <p className="mt-1 text-sm text-foreground/80">
+          <p className="mt-1 text-base text-foreground/80">
             {step.role} &middot;{" "}
             <span className="text-accent">{step.period}</span>
           </p>
         </div>
       </div>
 
-      <div className="mt-6 grid gap-10 lg:grid-cols-12">
+      <div className="mt-5 grid gap-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <h4 className="text-xs tracking-[0.15em] text-accent uppercase">
             Role Overview
           </h4>
-          <p className="mt-2 text-base leading-relaxed text-foreground/90">
+          <p className="mt-2 text-lg leading-relaxed text-foreground/90">
             {step.roleOverview}
           </p>
 
-          <h4 className="mt-5 text-xs tracking-[0.15em] text-accent uppercase">
+          <h4 className="mt-3 text-xs tracking-[0.15em] text-accent uppercase">
             Responsibilities
           </h4>
-          <ul className="mt-2 space-y-1.5">
+          <ul className="mt-2 space-y-1">
             {step.responsibilities.map((item) => (
-              <li key={item} className="flex items-start gap-2">
+              <li key={item} className="flex items-start gap-2.5">
                 <CheckCircle2
-                  className="mt-0.5 h-4 w-4 shrink-0 text-accent"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-accent"
                   strokeWidth={1.75}
                 />
-                <span className="text-sm leading-snug text-muted">
+                <span className="text-base leading-snug text-muted">
                   {item}
                 </span>
               </li>
@@ -144,8 +134,8 @@ function DetailPanel({ step }: { step: Step }) {
             ))}
           </div>
 
-          <div className="mt-5 border-l-2 border-accent/60 pl-4">
-            <p className="font-display text-base leading-snug text-foreground/90 italic">
+          <div className="mt-4 border-l-2 border-accent/60 pl-5">
+            <p className="font-display text-lg leading-snug text-foreground/90 italic">
               &ldquo;{step.takeaway}&rdquo;
             </p>
           </div>
@@ -173,17 +163,17 @@ export default function CareerRoadmap() {
         style={{ backgroundImage: `url(${basePath}/wave-lines-b.svg)` }}
       />
       <div className="flex min-h-full flex-col justify-center">
-        <div className="relative mx-auto w-full max-w-6xl px-6 pt-8 pb-20 md:px-10">
+        <div className="relative mx-auto w-full max-w-6xl px-6 pt-6 pb-20 md:px-10">
           <SectionHeading index="02" label="Career Roadmap" compact />
 
           <div>
-            <div className="mb-4 hidden h-px bg-line sm:block">
+            <div className="mb-5 hidden h-px bg-line sm:block">
               <div
                 className="h-px bg-accent transition-all duration-700 ease-out"
                 style={{ width: `${progress}%` }}
               />
             </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-5">
               {careerRoadmap.map((step, i) => (
                 <MilestoneButton
                   key={step.id}

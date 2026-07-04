@@ -15,7 +15,7 @@ export default function SectionHeading({
 
   return (
     <div
-      className={`flex items-baseline gap-4 ${compact ? "mb-8 md:mb-10" : "mb-14 md:mb-20"}`}
+      className={`flex items-baseline gap-4 ${compact ? "mb-6 md:mb-8" : "mb-14 md:mb-20"}`}
     >
       <span className="font-display text-3xl text-accent md:text-4xl">
         {index}
