@@ -10,7 +10,7 @@ export default function Footer() {
         style={{ backgroundImage: `url(${basePath}/wave-lines-b.svg)` }}
       />
       <div className="relative mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
-        <SectionHeading index="05" label="Contact" />
+        <SectionHeading index="04" label="Contact" />
         <h2 className="max-w-2xl font-display text-4xl leading-[1.1] font-normal text-balance sm:text-5xl">
           Let&apos;s talk about what&apos;s next.
         </h2>

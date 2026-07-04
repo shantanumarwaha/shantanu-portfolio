@@ -11,7 +11,7 @@ export default function Projects() {
           style={{ backgroundImage: `url(${basePath}/wave-lines-a.svg)` }}
         />
         <div className="relative mx-auto max-w-6xl px-6 pt-28 md:px-10 md:pt-36">
-          <SectionHeading index="04" label="Projects & Flagship Cases" />
+          <SectionHeading index="03" label="Projects & Flagship Cases" />
         </div>
       </div>
 

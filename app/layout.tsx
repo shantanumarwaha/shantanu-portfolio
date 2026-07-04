@@ -24,7 +24,7 @@ const carlito = Carlito({
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} — Portfolio`,
+  title: `${profile.name} | Portfolio`,
   description: profile.statement,
 };
 
