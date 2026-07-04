@@ -64,7 +64,7 @@ export default function ExecutiveSummary() {
         className="pointer-events-none absolute -right-16 -bottom-16 h-[420px] w-[560px] bg-contain bg-right-bottom bg-no-repeat opacity-70"
         style={{ backgroundImage: `url(${basePath}/wave-lines-a.svg)` }}
       />
-      <div className="relative mx-auto max-w-[1480px] px-6 pt-8 pb-12 md:px-12 md:pt-10 md:pb-14">
+      <div className="relative mx-auto max-w-6xl px-6 pt-8 pb-12 md:px-10 md:pt-10 md:pb-14">
         <SectionHeading
           index="01"
           label={executiveSummary.label}
