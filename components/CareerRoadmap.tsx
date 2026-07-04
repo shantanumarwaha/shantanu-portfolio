@@ -180,36 +180,38 @@ export default function CareerRoadmap() {
   return (
     <section
       id="career-roadmap"
-      className="bg-theme sticky top-0 z-20 overflow-hidden border-b-2 border-line"
+      className="relative min-h-[200vh] border-b-2 border-line"
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-20 -left-24 h-[380px] w-[520px] rotate-180 bg-contain bg-left-top bg-no-repeat opacity-60"
-        style={{ backgroundImage: `url(${basePath}/wave-lines-b.svg)` }}
-      />
-      <div className="relative mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
-        <SectionHeading index="02" label="Career Roadmap" />
+      <div className="bg-theme sticky top-0 z-20 h-screen overflow-y-auto overflow-x-hidden">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-20 -left-24 h-[380px] w-[520px] rotate-180 bg-contain bg-left-top bg-no-repeat opacity-60"
+          style={{ backgroundImage: `url(${basePath}/wave-lines-b.svg)` }}
+        />
+        <div className="relative mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
+          <SectionHeading index="02" label="Career Roadmap" />
 
-        <div>
-          <div className="mb-8 hidden h-px bg-line sm:block">
-            <div
-              className="h-px bg-accent transition-all duration-700 ease-out"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
-            {careerRoadmap.map((step, i) => (
-              <MilestoneButton
-                key={step.id}
-                step={step}
-                active={i === activeIndex}
-                onSelect={() => setActiveIndex(i)}
+          <div>
+            <div className="mb-8 hidden h-px bg-line sm:block">
+              <div
+                className="h-px bg-accent transition-all duration-700 ease-out"
+                style={{ width: `${progress}%` }}
               />
-            ))}
+            </div>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+              {careerRoadmap.map((step, i) => (
+                <MilestoneButton
+                  key={step.id}
+                  step={step}
+                  active={i === activeIndex}
+                  onSelect={() => setActiveIndex(i)}
+                />
+              ))}
+            </div>
           </div>
-        </div>
 
-        <DetailPanel step={careerRoadmap[activeIndex]} />
+          <DetailPanel step={careerRoadmap[activeIndex]} />
+        </div>
       </div>
     </section>
   );

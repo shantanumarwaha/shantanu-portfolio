@@ -3,72 +3,71 @@ import SectionHeading from "./SectionHeading";
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="bg-theme sticky top-0 z-30 border-b-2 border-line"
-    >
-      <div className="relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-10 -right-20 h-[300px] w-[460px] scale-x-[-1] bg-contain bg-right-top bg-no-repeat opacity-60"
-          style={{ backgroundImage: `url(${basePath}/wave-lines-a.svg)` }}
-        />
-        <div className="relative mx-auto max-w-6xl px-6 pt-28 md:px-10 md:pt-36">
-          <SectionHeading index="03" label="Projects & Flagship Cases" />
+    <section id="projects" className="relative min-h-[220vh] border-b-2 border-line">
+      <div className="bg-theme sticky top-0 z-30 h-screen overflow-y-auto overflow-x-hidden">
+        <div className="relative overflow-hidden">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-10 -right-20 h-[300px] w-[460px] scale-x-[-1] bg-contain bg-right-top bg-no-repeat opacity-60"
+            style={{ backgroundImage: `url(${basePath}/wave-lines-a.svg)` }}
+          />
+          <div className="relative mx-auto max-w-6xl px-6 pt-28 md:px-10 md:pt-36">
+            <SectionHeading index="03" label="Projects & Flagship Cases" />
+          </div>
         </div>
-      </div>
 
-      <div>
-        {projects.map((project, i) => {
-          const dark = i % 2 === 0;
-          return (
-            <div
-              key={project.index}
-              className={`border-t-2 border-line ${
-                dark ? "bg-background text-foreground" : "bg-panel text-panel-foreground"
-              }`}
-            >
-              <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-14 md:grid-cols-12 md:gap-10 md:px-10 md:py-20">
-                <div className="md:col-span-5">
-                  <span
-                    className={`text-sm ${dark ? "text-muted" : "text-muted-panel"}`}
-                  >
-                    [{project.index}]
-                  </span>
-                  <h3 className="mt-4 font-display text-3xl leading-tight md:text-4xl">
-                    {project.title}
-                  </h3>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-current/20 px-3 py-1 text-xs tracking-wide uppercase text-accent"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+        <div>
+          {projects.map((project, i) => {
+            const dark = i % 2 === 0;
+            return (
+              <div
+                key={project.index}
+                className={`border-t-2 border-line ${
+                  dark ? "bg-background text-foreground" : "bg-panel text-panel-foreground"
+                }`}
+              >
+                <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-14 md:grid-cols-12 md:gap-10 md:px-10 md:py-20">
+                  <div className="md:col-span-5">
+                    <span
+                      className={`text-sm ${dark ? "text-muted" : "text-muted-panel"}`}
+                    >
+                      [{project.index}]
+                    </span>
+                    <h3 className="mt-4 font-display text-3xl leading-tight md:text-4xl">
+                      {project.title}
+                    </h3>
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-current/20 px-3 py-1 text-xs tracking-wide uppercase text-accent"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="md:col-span-7">
+                    <p
+                      className={`font-display text-xl italic ${
+                        dark ? "text-foreground/90" : "text-panel-foreground/90"
+                      }`}
+                    >
+                      {project.result}
+                    </p>
+                    <p
+                      className={`mt-4 text-base leading-relaxed ${
+                        dark ? "text-muted" : "text-muted-panel"
+                      }`}
+                    >
+                      {project.description}
+                    </p>
                   </div>
                 </div>
-                <div className="md:col-span-7">
-                  <p
-                    className={`font-display text-xl italic ${
-                      dark ? "text-foreground/90" : "text-panel-foreground/90"
-                    }`}
-                  >
-                    {project.result}
-                  </p>
-                  <p
-                    className={`mt-4 text-base leading-relaxed ${
-                      dark ? "text-muted" : "text-muted-panel"
-                    }`}
-                  >
-                    {project.description}
-                  </p>
-                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );
