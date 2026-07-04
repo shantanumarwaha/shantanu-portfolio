@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="top"
       className="relative flex h-screen min-h-screen items-center justify-center overflow-hidden bg-background bg-cover bg-center px-6 text-center"
-      style={{ backgroundImage: `url(${basePath}/hero-bg-3.svg)` }}
+      style={{ backgroundImage: `url(${basePath}/hero-bg-4.svg)` }}
     >
       <div className="animate-fade-in-up relative mx-auto flex w-full max-w-2xl flex-col items-center rounded-3xl border border-white/[0.14] bg-gradient-to-b from-white/[0.07] to-white/[0.02] px-8 py-16 shadow-2xl backdrop-blur-md sm:px-14 sm:py-20">
         <h1 className="font-display text-4xl font-normal text-foreground sm:text-5xl md:text-6xl">

@@ -88,7 +88,7 @@ export const careerRoadmap = [
   {
     id: "grant-thornton",
     company: "Grant Thornton",
-    logo: "grant-thornton.svg",
+    logo: "grant-thornton-2.svg",
     role: "Private Equity & Risk Consulting",
     period: "2021 – 2025",
     companyDescription:

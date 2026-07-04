@@ -57,14 +57,14 @@ export default function ExecutiveSummary() {
   return (
     <section
       id="executive-summary"
-      className="bg-theme relative overflow-hidden border-b-2 border-line"
+      className="bg-theme relative flex min-h-screen flex-col justify-center overflow-hidden border-b-2 border-line"
     >
       <div
         aria-hidden
         className="pointer-events-none absolute -right-16 -bottom-16 h-[420px] w-[560px] bg-contain bg-right-bottom bg-no-repeat opacity-70"
         style={{ backgroundImage: `url(${basePath}/wave-lines-a.svg)` }}
       />
-      <div className="relative mx-auto max-w-6xl px-6 pt-8 pb-12 md:px-10 md:pt-10 md:pb-14">
+      <div className="relative mx-auto w-full max-w-6xl px-6 py-16 md:px-10">
         <SectionHeading
           index="01"
           label={executiveSummary.label}
