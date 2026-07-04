@@ -180,7 +180,7 @@ export default function CareerRoadmap() {
   return (
     <section
       id="career-roadmap"
-      className="bg-theme relative overflow-hidden border-b-2 border-line"
+      className="bg-theme sticky top-0 z-20 overflow-hidden border-b-2 border-line"
     >
       <div
         aria-hidden

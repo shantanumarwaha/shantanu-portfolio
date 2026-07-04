@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navLinks, profile } from "@/lib/content";
 
@@ -25,21 +24,21 @@ export default function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10">
-        <Link
+        <a
           href="#top"
           className="font-display text-lg tracking-wide text-foreground"
         >
           {profile.name}
-        </Link>
+        </a>
         <nav className="flex gap-5 overflow-x-auto text-[0.65rem] tracking-[0.15em] whitespace-nowrap text-muted uppercase md:gap-8 md:text-xs">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.href}
               href={link.href}
               className="transition-colors hover:text-accent"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
       </div>

@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-theme relative overflow-hidden">
+    <footer id="contact" className="bg-theme sticky top-0 z-40 overflow-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute -bottom-16 -left-16 h-[320px] w-[460px] scale-y-[-1] bg-contain bg-left-bottom bg-no-repeat opacity-55"
