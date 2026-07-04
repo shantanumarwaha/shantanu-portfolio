@@ -4,8 +4,10 @@
 
 // GitHub Pages serves this site from a /shantanu-portfolio subpath, so
 // hardcoded links to files in `public/` need that prefix at build time.
-export const basePath =
-  process.env.GITHUB_PAGES === "true" ? "/shantanu-portfolio" : "";
+// Read via the NEXT_PUBLIC_ mirror (set in next.config.ts) rather than
+// GITHUB_PAGES directly — plain env vars aren't inlined into client
+// component bundles, only NEXT_PUBLIC_-prefixed ones are.
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const profile = {
   name: "Shantanu Marwaha",

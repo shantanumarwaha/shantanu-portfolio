@@ -190,8 +190,8 @@ export default function CareerRoadmap() {
       <div className="relative mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
         <SectionHeading index="02" label="Career Roadmap" />
 
-        <div className="relative">
-          <div className="absolute top-7 right-0 left-0 hidden h-px bg-line sm:block">
+        <div>
+          <div className="mb-8 hidden h-px bg-line sm:block">
             <div
               className="h-px bg-accent transition-all duration-700 ease-out"
               style={{ width: `${progress}%` }}
