@@ -56,7 +56,7 @@ export const careerRoadmap = [
   {
     id: "airbnb",
     company: "Airbnb",
-    monogram: "A",
+    logo: "airbnb.svg",
     role: "Founder & Operator",
     period: "2019 – 2025",
     companyDescription:
@@ -87,7 +87,7 @@ export const careerRoadmap = [
   {
     id: "grant-thornton",
     company: "Grant Thornton",
-    monogram: "GT",
+    logo: "grant-thornton.svg",
     role: "Private Equity & Risk Consulting",
     period: "2021 – 2025",
     companyDescription:
@@ -119,7 +119,7 @@ export const careerRoadmap = [
   {
     id: "leo",
     company: "LEO",
-    monogram: "LEO",
+    logo: "leo.svg",
     role: "MBA Strategy Consulting Project",
     period: "Spring 2026",
     companyDescription: "$380M PE-backed facilities maintenance platform.",
@@ -148,8 +148,8 @@ export const careerRoadmap = [
   {
     id: "solenis",
     company: "Solenis",
-    monogram: "S",
-    role: "Commercial Strategy MBA Internship",
+    logo: "solenis.svg",
+    role: "MBA Intern – Product and Strategy",
     period: "Summer 2026",
     companyDescription: "$7.3B specialty chemicals manufacturer.",
     roleOverview:

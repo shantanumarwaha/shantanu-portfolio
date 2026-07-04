@@ -1,11 +1,18 @@
-import { projects } from "@/lib/content";
+import { basePath, projects } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
 
 export default function Projects() {
   return (
     <section id="projects" className="bg-theme border-b-2 border-line">
-      <div className="mx-auto max-w-6xl px-6 pt-28 md:px-10 md:pt-36">
-        <SectionHeading index="04" label="Projects & Flagship Cases" />
+      <div className="relative overflow-hidden">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-10 -right-20 h-[300px] w-[460px] scale-x-[-1] bg-contain bg-right-top bg-no-repeat opacity-60"
+          style={{ backgroundImage: `url(${basePath}/wave-lines-a.svg)` }}
+        />
+        <div className="relative mx-auto max-w-6xl px-6 pt-28 md:px-10 md:pt-36">
+          <SectionHeading index="04" label="Projects & Flagship Cases" />
+        </div>
       </div>
 
       <div>

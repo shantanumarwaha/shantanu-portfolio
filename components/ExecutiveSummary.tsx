@@ -8,7 +8,7 @@ import {
   Users,
   type LucideIcon,
 } from "lucide-react";
-import { executiveSummary } from "@/lib/content";
+import { basePath, executiveSummary } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
 
 function MetricCard({
@@ -57,9 +57,14 @@ export default function ExecutiveSummary() {
   return (
     <section
       id="executive-summary"
-      className="bg-theme border-b-2 border-line"
+      className="bg-theme relative overflow-hidden border-b-2 border-line"
     >
-      <div className="mx-auto max-w-[1480px] px-6 py-28 md:px-12 md:py-40">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-16 -bottom-16 h-[420px] w-[560px] bg-contain bg-right-bottom bg-no-repeat opacity-70"
+        style={{ backgroundImage: `url(${basePath}/wave-lines-a.svg)` }}
+      />
+      <div className="relative mx-auto max-w-[1480px] px-6 py-28 md:px-12 md:py-40">
         <SectionHeading index="01" label={executiveSummary.label} />
 
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">

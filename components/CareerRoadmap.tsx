@@ -2,21 +2,34 @@
 
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
-import { careerRoadmap } from "@/lib/content";
+import { basePath, careerRoadmap } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
 
 type Step = (typeof careerRoadmap)[number];
 
-function Monogram({ text, active }: { text: string; active: boolean }) {
+function CompanyLogo({
+  logo,
+  company,
+  active,
+  size = "md",
+}: {
+  logo: string;
+  company: string;
+  active: boolean;
+  size?: "md" | "lg";
+}) {
+  const dims = size === "lg" ? "h-20 w-20 p-3.5" : "h-16 w-16 p-3";
   return (
     <div
-      className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl font-display text-lg transition-colors duration-300 ${
-        active
-          ? "border border-accent/60 bg-accent/15 text-accent"
-          : "border border-white/15 bg-white/[0.04] text-foreground/70"
+      className={`flex shrink-0 items-center justify-center rounded-2xl bg-white/95 shadow-lg transition-all duration-300 ${dims} ${
+        active ? "ring-2 ring-accent/70" : "ring-1 ring-white/10"
       }`}
     >
-      {text}
+      <img
+        src={`${basePath}/logos/${logo}`}
+        alt={`${company} logo`}
+        className="h-full w-full object-contain"
+      />
     </div>
   );
 }
@@ -40,10 +53,10 @@ function MilestoneButton({
           : "border-transparent opacity-70 shadow-none hover:opacity-100"
       }`}
     >
-      <Monogram text={step.monogram} active={active} />
+      <CompanyLogo logo={step.logo} company={step.company} active={active} />
       <div>
         <p
-          className={`font-display text-lg ${active ? "text-foreground" : "text-foreground/80"}`}
+          className={`font-display text-xl ${active ? "text-foreground" : "text-foreground/80"}`}
         >
           {step.company}
         </p>
@@ -73,12 +86,17 @@ function DetailPanel({ step }: { step: Step }) {
   return (
     <div key={step.id} className="animate-fade-in mt-16 md:mt-20">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
-        <Monogram text={step.monogram} active />
+        <CompanyLogo
+          logo={step.logo}
+          company={step.company}
+          active
+          size="lg"
+        />
         <div>
-          <h3 className="font-display text-3xl leading-tight md:text-4xl">
+          <h3 className="font-display text-4xl leading-tight md:text-5xl">
             {step.company}
           </h3>
-          <p className="mt-1 text-base text-foreground/80">
+          <p className="mt-2 text-base text-foreground/80">
             {step.role} &middot;{" "}
             <span className="text-accent">{step.period}</span>
           </p>
@@ -160,8 +178,16 @@ export default function CareerRoadmap() {
       : 0;
 
   return (
-    <section id="career-roadmap" className="bg-theme border-b-2 border-line">
-      <div className="mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
+    <section
+      id="career-roadmap"
+      className="bg-theme relative overflow-hidden border-b-2 border-line"
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-20 -left-24 h-[380px] w-[520px] rotate-180 bg-contain bg-left-top bg-no-repeat opacity-60"
+        style={{ backgroundImage: `url(${basePath}/wave-lines-b.svg)` }}
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-28 md:px-10 md:py-36">
         <SectionHeading index="02" label="Career Roadmap" />
 
         <div className="relative">
