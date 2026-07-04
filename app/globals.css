@@ -59,19 +59,34 @@ body {
   animation: fade-in-up 0.9s ease-out both;
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
+
 /* Recurring theme motif echoing the cover background: soft corner glows
-   (blue + warm gold, matching the sphere rim lights) plus a faint dot grid. */
+   (blue + warm gold, matching the sphere rim lights) plus a faint grid line pattern. */
 .bg-theme {
   background-color: var(--background);
   background-image:
     radial-gradient(circle 620px at 4% -6%, rgba(75, 156, 211, 0.1), transparent 62%),
     radial-gradient(circle 680px at 102% 108%, rgba(232, 201, 138, 0.08), transparent 62%),
-    radial-gradient(rgba(243, 239, 231, 0.12) 1px, transparent 1px);
+    linear-gradient(rgba(243, 239, 231, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243, 239, 231, 0.08) 1px, transparent 1px);
   background-size:
     auto,
     auto,
-    22px 22px;
-  background-repeat: no-repeat, no-repeat, repeat;
+    44px 44px,
+    44px 44px;
+  background-repeat: no-repeat, no-repeat, repeat, repeat;
 }
 
 .glow-card {

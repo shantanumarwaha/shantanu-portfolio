@@ -54,28 +54,125 @@ export const executiveSummary = {
 
 export const careerRoadmap = [
   {
-    index: "01",
-    period: "2021 — 2025",
+    id: "airbnb",
+    company: "Airbnb",
+    monogram: "A",
+    role: "Founder & Operator",
+    period: "2019 – 2025",
+    companyDescription:
+      "Independent short-term rental venture, built and operated alongside a full-time consulting career.",
+    roleOverview:
+      "Built and scaled a short-term rental business from scratch — owning pricing strategy, customer acquisition, and guest experience for guests from 8 countries, entirely alongside a full-time consulting career.",
+    metrics: [
+      { value: "$35K", label: "Annual Revenue" },
+      { value: "200%+", label: "Return vs. Long-Term Rental" },
+      { value: "75+", label: "Guests Hosted" },
+      { value: "8", label: "Countries Represented" },
+    ],
+    responsibilities: [
+      "Owned end-to-end pricing and revenue management strategy",
+      "Drove guest acquisition and channel marketing",
+      "Managed guest experience and day-to-day operations",
+      "Ran comparable-market analysis to inform listing strategy",
+    ],
+    skills: [
+      "Growth Strategy",
+      "Market Intelligence",
+      "Stakeholder Management",
+      "Competitive Intelligence",
+    ],
+    takeaway:
+      "Learned to own outcomes end-to-end — planting the seed for a career built on more than advisory work.",
+  },
+  {
+    id: "grant-thornton",
+    company: "Grant Thornton",
+    monogram: "GT",
     role: "Private Equity & Risk Consulting",
-    org: "Grant Thornton, New Delhi",
-    description:
-      "Advised 20+ global private equity funds across 300+ deals and $2B in investment decisions. Directed due diligence that reshaped outcomes — an 11% valuation renegotiation on a $229M SaaS deal, $400K in financial irregularities uncovered on a healthcare acquisition (17% lower valuation), a branch restructuring on a $76M housing finance deal (-19% loan defaults), and a $183M deal an investor withdrew from after a reputational-risk finding.",
+    period: "2021 – 2025",
+    companyDescription:
+      "Global professional services firm advising private equity funds on deal due diligence.",
+    roleOverview:
+      "Advised 20+ global private equity funds across 300+ deals and $2B in investment decisions, directing commercial and risk due diligence that directly reshaped deal outcomes.",
+    metrics: [
+      { value: "$2B+", label: "Investment Decisions Supported" },
+      { value: "300+", label: "Deals Evaluated" },
+      { value: "20+", label: "PE Funds Advised" },
+      { value: "11%", label: "Valuation Renegotiation, $229M Deal" },
+      { value: "$400K", label: "Irregularities Uncovered" },
+    ],
+    responsibilities: [
+      "Led commercial due diligence workstreams for live PE transactions",
+      "Directed investigations that surfaced financial irregularities",
+      "Advised deal teams on valuation and structuring implications",
+      "Managed cross-functional risk assessments across geographies",
+    ],
+    skills: [
+      "Commercial Due Diligence",
+      "Market Intelligence",
+      "Competitive Intelligence",
+      "Stakeholder Management",
+    ],
+    takeaway:
+      "Built the analytical rigor and deal-evaluation instincts that now anchor every strategic recommendation I make.",
   },
   {
-    index: "02",
-    period: "2025 — 2027",
-    role: "Candidate, Full-Time Program",
-    org: "UNC Kenan-Flagler Business School",
-    description:
-      "Concentrating in Strategy & Consulting, Entrepreneurship, and Technology Innovation. UNC Wittman Centennial Merit Fellow. EVP – Finance for the Consulting Club, leading budgets and strategic planning for treks and labs.",
+    id: "leo",
+    company: "LEO",
+    monogram: "LEO",
+    role: "MBA Strategy Consulting Project",
+    period: "Spring 2026",
+    companyDescription: "$380M PE-backed facilities maintenance platform.",
+    roleOverview:
+      "Built an AI-powered market intelligence and M&A screening MVP, automating competitor research and stakeholder survey analysis to shape pricing and go-to-market strategy.",
+    metrics: [
+      { value: "45+", label: "Competitors Automated" },
+      { value: "30,000+", label: "Stakeholders Surveyed" },
+      { value: "1", label: "AI MVP Shipped" },
+    ],
+    responsibilities: [
+      "Designed an AI-driven competitor research automation tool",
+      "Ran survey analytics across 30,000+ stakeholders",
+      "Translated findings into pricing and go-to-market recommendations",
+      "Presented strategic findings to PE-backed leadership",
+    ],
+    skills: [
+      "AI & Automation",
+      "Market Sizing",
+      "Growth Strategy",
+      "Market Intelligence",
+    ],
+    takeaway:
+      "Proved that AI tooling can compress weeks of manual research into an on-demand strategic asset.",
   },
   {
-    index: "03",
+    id: "solenis",
+    company: "Solenis",
+    monogram: "S",
+    role: "Commercial Strategy MBA Internship",
     period: "Summer 2026",
-    role: "Commercial Strategy Intern",
-    org: "Solenis",
-    description:
-      "Led market sizing across North America, Europe, APAC, Emerging Markets, and LATAM for a $7.3B specialty chemicals manufacturer, identifying strategic white spaces to support a 3x revenue growth roadmap.",
+    companyDescription: "$7.3B specialty chemicals manufacturer.",
+    roleOverview:
+      "Leading market sizing across North America, Europe, APAC, Emerging Markets, and LATAM to identify strategic white spaces supporting a 3x revenue growth roadmap.",
+    metrics: [
+      { value: "$7.3B", label: "Manufacturer Revenue" },
+      { value: "5", label: "Regions Sized" },
+      { value: "3x", label: "Growth Roadmap Target" },
+    ],
+    responsibilities: [
+      "Led cross-regional market sizing across 5 geographies",
+      "Identified strategic white space opportunities",
+      "Built frameworks supporting a 3x growth roadmap",
+      "Partnered directly with commercial leadership",
+    ],
+    skills: [
+      "Market Sizing",
+      "Growth Strategy",
+      "Commercial Due Diligence",
+      "Competitive Intelligence",
+    ],
+    takeaway:
+      "Applied consulting rigor to real commercial strategy decisions at global scale — the clearest bridge yet to management consulting.",
   },
 ];
 
