@@ -25,7 +25,7 @@ export const profile = {
 export const navLinks = [
   { label: "Executive Summary", href: "#executive-summary" },
   { label: "Career Roadmap", href: "#career-roadmap" },
-  { label: "Projects", href: "#projects" },
+  { label: "Engagements", href: "#engagements" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -177,37 +177,96 @@ export const careerRoadmap = [
   },
 ];
 
-export const projects = [
+export const engagements = [
   {
+    id: "housing-finance",
     index: "01",
-    title: "AI-Powered Market Intelligence MVP",
-    result: "Automated research across 45+ competitors and 30,000+ stakeholder surveys",
-    description:
-      "Built an AI-powered market intelligence and M&A screening MVP for LeO, a $380M PE-backed facilities maintenance platform, turning weeks of manual research into an on-demand tool and running survey analytics across 30,000+ stakeholders to shape pricing and go-to-market strategy.",
-    tags: ["AI/ML", "MBA Consulting Project"],
+    title: "Commercial Due Diligence for an Affordable Housing Finance Company",
+    tags: ["Private Equity", "Commercial Due Diligence", "Financial Services"],
+    situation:
+      "A leading private equity firm was evaluating an investment in an affordable housing finance company and required a deeper assessment of its commercial viability, underwriting quality, operational practices, and long-term growth potential before proceeding with the acquisition.",
+    outcome:
+      "120 branches analyzed • 46 underperforming branches identified • Investment declined",
+    approach:
+      "Conducted branch-level performance reviews across the lender's network, benchmarking underwriting discipline and loan quality against portfolio-wide standards. Combined on-the-ground field investigations with financial analysis to pressure-test growth assumptions and surface risks not visible in headline portfolio metrics.",
+    metrics: [
+      { value: "120", label: "Branches Analyzed" },
+      { value: "46", label: "Underperforming Branches" },
+      { value: "Declined", label: "Investment Recommendation" },
+    ],
+    capabilities: [
+      "Commercial Due Diligence",
+      "Operational Due Diligence",
+      "Financial Analysis",
+      "Stakeholder Interviews",
+    ],
   },
   {
+    id: "b2b-saas",
     index: "02",
-    title: "B2B SaaS Regulatory Risk Review",
-    result: "11% valuation renegotiation on a $229M deal",
-    description:
-      "Directed risk analysis for a $229M B2B SaaS acquisition at Grant Thornton, identifying regulatory compliance gaps across North America, EMEA, and APAC that compelled the client to renegotiate the deal's valuation.",
-    tags: ["Private Equity", "Due Diligence"],
+    title: "Commercial Due Diligence for a B2B SaaS Company",
+    tags: ["Private Equity", "Commercial Due Diligence", "SaaS"],
+    situation:
+      "Conducted commercial due diligence for a leading B2B SaaS company by assessing market attractiveness, competitive positioning, regulatory compliance, and commercial scalability across North America, EMEA, and APAC.",
+    outcome: "11% valuation renegotiation • $229M transaction",
+    approach:
+      "Assessed market attractiveness and competitive positioning across North America, EMEA, and APAC, combining regulatory compliance review with commercial scalability analysis to stress-test the company's growth trajectory ahead of a $229M transaction.",
+    metrics: [
+      { value: "11%", label: "Valuation Renegotiation" },
+      { value: "$229M", label: "Transaction Size" },
+      { value: "3", label: "Regions Assessed" },
+    ],
+    capabilities: [
+      "Commercial Due Diligence",
+      "Market Sizing",
+      "Competitive Intelligence",
+      "Financial Analysis",
+    ],
   },
   {
+    id: "fintech-lending",
     index: "03",
-    title: "Housing Finance Field Investigation",
-    result: "19% reduction in loan defaults across 120 branches",
-    description:
-      "Analyzed loan performance data across 120 branches of an affordable housing lender, pinpointing 46 underperforming locations and driving a branch restructuring that cut loan defaults by 19%.",
-    tags: ["Private Equity", "Financial Services"],
+    title: "Commercial Due Diligence for a FinTech Lending Platform",
+    tags: ["Private Equity", "Commercial Due Diligence", "FinTech"],
+    situation:
+      "Evaluated a digital lending platform's underwriting model, customer acquisition strategy, operational processes, and portfolio quality to assess commercial attractiveness and identify investment risks.",
+    outcome:
+      "7+ underwriting gaps identified • Strengthened post-investment credit controls",
+    approach:
+      "Evaluated the platform's underwriting model and customer acquisition strategy through financial analysis and operational process reviews, benchmarking portfolio quality against industry standards to size commercial attractiveness and investment risk.",
+    metrics: [
+      { value: "7+", label: "Underwriting Gaps Identified" },
+      { value: "Post-Investment", label: "Credit Controls Strengthened" },
+      { value: "Full-Cycle", label: "Underwriting Model Reviewed" },
+    ],
+    capabilities: [
+      "Commercial Due Diligence",
+      "Financial Analysis",
+      "Competitive Intelligence",
+      "Investment Strategy",
+    ],
   },
   {
+    id: "healthcare-provider",
     index: "04",
-    title: "Airbnb Rental Properties: Founder & Operator",
-    result: "$35K annual revenue, 200%+ returns vs. long-term rentals",
-    description:
-      "Built and scaled a short-term rental business from scratch alongside a full-time consulting career, owning pricing strategy, customer acquisition, and guest experience for 75+ guests from 8 countries.",
-    tags: ["Entrepreneurship", "Operations"],
+    title: "Operational & Integrity Due Diligence for a Healthcare Provider",
+    tags: ["Private Equity", "Investigative Due Diligence", "Healthcare"],
+    situation:
+      "Conducted operational and integrity due diligence to evaluate governance practices, financial integrity, and reputational risks before acquisition through investigative research and forensic document reviews.",
+    outcome:
+      "$400K financial misappropriation uncovered • 17% valuation reduction",
+    approach:
+      "Led investigative due diligence combining forensic document review with stakeholder interviews to evaluate governance practices, financial integrity, and reputational risk ahead of acquisition.",
+    metrics: [
+      { value: "$400K", label: "Financial Misappropriation Uncovered" },
+      { value: "17%", label: "Valuation Reduction" },
+      { value: "Governance", label: "Risks Identified" },
+    ],
+    capabilities: [
+      "Integrity Due Diligence",
+      "Financial Analysis",
+      "Stakeholder Interviews",
+      "Investment Strategy",
+    ],
   },
 ];
