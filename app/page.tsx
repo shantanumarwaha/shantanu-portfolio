@@ -2,7 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import ExecutiveSummary from "@/components/ExecutiveSummary";
 import CareerRoadmap from "@/components/CareerRoadmap";
-import Projects from "@/components/Projects";
+import Engagements from "@/components/Engagements";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
         <Hero />
         <ExecutiveSummary />
         <CareerRoadmap />
-        <Projects />
+        <Engagements />
       </main>
       <Footer />
     </>
