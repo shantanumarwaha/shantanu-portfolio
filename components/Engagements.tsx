@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, X } from "lucide-react";
 import { basePath, engagements } from "@/lib/content";
 import SectionHeading from "./SectionHeading";
 
@@ -47,10 +47,8 @@ function EngagementCard({
         {engagement.outcome}
       </p>
       <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium tracking-wide text-accent">
-        {active ? "Hide Full Case" : "View Full Case"}
-        <ArrowRight
-          className={`h-3.5 w-3.5 transition-transform duration-300 ${active ? "rotate-90" : ""}`}
-        />
+        View Full Case
+        <ArrowRight className="h-3.5 w-3.5" />
       </span>
     </button>
   );
@@ -67,62 +65,96 @@ function MetricCard({ value, label }: { value: string; label: string }) {
   );
 }
 
-function ExpandedPanel({ engagement }: { engagement: Engagement }) {
+function EngagementModal({
+  engagement,
+  onClose,
+}: {
+  engagement: Engagement;
+  onClose: () => void;
+}) {
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [onClose]);
+
   return (
     <div
-      key={engagement.id}
-      className="animate-fade-in glow-card mt-6 rounded-[22px] border border-white/10 bg-white/[0.03] p-6 shadow-lg backdrop-blur-md md:p-8"
+      className="animate-fade-in fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm md:p-8"
+      onClick={onClose}
     >
-      <div className="flex items-baseline gap-3">
-        <span className="text-xs text-muted">[{engagement.index}]</span>
-        <h3 className="font-display text-2xl leading-tight md:text-3xl">
-          {engagement.title}
-        </h3>
-      </div>
+      <div
+        key={engagement.id}
+        onClick={(event) => event.stopPropagation()}
+        className="animate-modal-in glow-card relative max-h-[85vh] w-full max-w-4xl overflow-y-auto rounded-[24px] border border-white/10 bg-[#0a0a09] p-6 shadow-2xl backdrop-blur-md md:p-8"
+      >
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close case"
+          className="absolute top-4 right-4 rounded-full border border-white/10 bg-white/[0.04] p-2 text-muted transition-colors hover:text-foreground"
+        >
+          <X className="h-5 w-5" />
+        </button>
 
-      <div className="mt-6 grid gap-8 lg:grid-cols-12">
-        <div className="lg:col-span-5">
-          <h4 className="text-xs tracking-[0.15em] text-accent uppercase">
-            Situation
-          </h4>
-          <p className="mt-2 text-base leading-relaxed text-foreground/90">
-            {engagement.situation}
-          </p>
-
-          <h4 className="mt-5 text-xs tracking-[0.15em] text-accent uppercase">
-            Our Approach
-          </h4>
-          <p className="mt-2 text-base leading-relaxed text-foreground/90">
-            {engagement.approach}
-          </p>
+        <div className="flex items-baseline gap-3 pr-10">
+          <span className="text-xs text-muted">[{engagement.index}]</span>
+          <h3 className="font-display text-2xl leading-tight md:text-3xl">
+            {engagement.title}
+          </h3>
         </div>
 
-        <div className="lg:col-span-7">
-          <h4 className="text-xs tracking-[0.15em] text-accent uppercase">
-            Impact
-          </h4>
-          <div className="mt-2 grid grid-cols-3 gap-3">
-            {engagement.metrics.map((metric) => (
-              <MetricCard
-                key={metric.label}
-                value={metric.value}
-                label={metric.label}
-              />
-            ))}
+        <div className="mt-6 grid gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <h4 className="text-xs tracking-[0.15em] text-accent uppercase">
+              Situation
+            </h4>
+            <p className="mt-2 text-base leading-relaxed text-foreground/90">
+              {engagement.situation}
+            </p>
+
+            <h4 className="mt-5 text-xs tracking-[0.15em] text-accent uppercase">
+              Our Approach
+            </h4>
+            <p className="mt-2 text-base leading-relaxed text-foreground/90">
+              {engagement.approach}
+            </p>
           </div>
 
-          <h4 className="mt-5 text-xs tracking-[0.15em] text-accent uppercase">
-            Key Capabilities
-          </h4>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {engagement.capabilities.map((capability) => (
-              <span
-                key={capability}
-                className="rounded-full border border-accent/30 px-3 py-1 text-xs tracking-wide text-accent"
-              >
-                {capability}
-              </span>
-            ))}
+          <div className="lg:col-span-7">
+            <h4 className="text-xs tracking-[0.15em] text-accent uppercase">
+              Impact
+            </h4>
+            <div className="mt-2 grid grid-cols-3 gap-3">
+              {engagement.metrics.map((metric) => (
+                <MetricCard
+                  key={metric.label}
+                  value={metric.value}
+                  label={metric.label}
+                />
+              ))}
+            </div>
+
+            <h4 className="mt-5 text-xs tracking-[0.15em] text-accent uppercase">
+              Key Capabilities
+            </h4>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {engagement.capabilities.map((capability) => (
+                <span
+                  key={capability}
+                  className="rounded-full border border-accent/30 px-3 py-1 text-xs tracking-wide text-accent"
+                >
+                  {capability}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -154,18 +186,19 @@ export default function Engagements() {
                 key={engagement.id}
                 engagement={engagement}
                 active={engagement.id === activeId}
-                onSelect={() =>
-                  setActiveId((current) =>
-                    current === engagement.id ? null : engagement.id,
-                  )
-                }
+                onSelect={() => setActiveId(engagement.id)}
               />
             ))}
           </div>
-
-          {active && <ExpandedPanel engagement={active} />}
         </div>
       </div>
+
+      {active && (
+        <EngagementModal
+          engagement={active}
+          onClose={() => setActiveId(null)}
+        />
+      )}
     </section>
   );
 }
