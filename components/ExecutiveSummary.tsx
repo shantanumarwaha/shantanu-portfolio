@@ -22,10 +22,10 @@ function MetricCard({
 }) {
   return (
     <div className="glow-card rounded-[22px] bg-white/[0.04] p-5 shadow-lg backdrop-blur-md transition-transform duration-300 hover:-translate-y-1.5 sm:p-6">
-      <p className="font-display text-[38px] leading-none text-foreground sm:text-[44px]">
+      <p className="font-display text-[38px] leading-none break-words text-foreground sm:text-[44px]">
         {value}
       </p>
-      <p className="mt-3 text-xs font-medium tracking-[0.15em] text-foreground/80 uppercase">
+      <p className="mt-3 text-xs font-medium tracking-[0.15em] break-words text-foreground/80 uppercase">
         {label}
       </p>
       <p className="mt-1 text-sm text-muted">{description}</p>

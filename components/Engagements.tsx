@@ -55,9 +55,9 @@ function EngagementCard({
 
 function MetricCard({ value, label }: { value: string; label: string }) {
   return (
-    <div className="glow-card rounded-xl bg-white/[0.04] p-4 shadow-lg backdrop-blur-md">
-      <p className="font-display text-3xl text-foreground">{value}</p>
-      <p className="mt-1.5 text-sm font-medium tracking-[0.08em] text-muted uppercase">
+    <div className="glow-card min-w-0 rounded-xl bg-white/[0.04] p-4 shadow-lg backdrop-blur-md">
+      <p className="font-display text-3xl break-words text-foreground">{value}</p>
+      <p className="mt-1.5 text-sm font-medium tracking-[0.08em] text-muted uppercase break-words">
         {label}
       </p>
     </div>
@@ -128,7 +128,7 @@ function EngagementModal({
             <h4 className="text-sm tracking-[0.15em] text-accent uppercase">
               Impact
             </h4>
-            <div className="mt-2.5 grid grid-cols-3 gap-3">
+            <div className="mt-2.5 grid grid-cols-1 gap-3 sm:grid-cols-3">
               {engagement.metrics.map((metric) => (
                 <MetricCard
                   key={metric.label}
