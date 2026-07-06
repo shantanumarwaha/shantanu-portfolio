@@ -73,7 +73,7 @@ export default function ExecutiveSummary() {
               {executiveSummary.paragraphs.map((p, i) => (
                 <p
                   key={i}
-                  className="font-display text-lg leading-[1.5] text-foreground/90 sm:text-xl"
+                  className="text-justify font-display text-lg leading-[1.5] text-foreground/90 sm:text-xl"
                 >
                   {p}
                 </p>

@@ -39,7 +39,7 @@ function EngagementCard({
           </span>
         ))}
       </div>
-      <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted">
+      <p className="mt-3 line-clamp-3 text-justify text-sm leading-relaxed text-muted">
         {engagement.situation}
       </p>
       <p className="mt-3 font-display text-base leading-snug text-foreground/90 italic">
@@ -112,14 +112,14 @@ function EngagementModal({
             <h4 className="text-sm tracking-[0.15em] text-accent uppercase">
               Situation
             </h4>
-            <p className="mt-2.5 text-lg leading-relaxed text-foreground/90">
+            <p className="mt-2.5 text-justify text-lg leading-relaxed text-foreground/90">
               {engagement.situation}
             </p>
 
             <h4 className="mt-6 text-sm tracking-[0.15em] text-accent uppercase">
               Our Approach
             </h4>
-            <p className="mt-2.5 text-lg leading-relaxed text-foreground/90">
+            <p className="mt-2.5 text-justify text-lg leading-relaxed text-foreground/90">
               {engagement.approach}
             </p>
           </div>
