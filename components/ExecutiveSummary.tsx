@@ -65,11 +65,7 @@ export default function ExecutiveSummary() {
         style={{ backgroundImage: `url(${basePath}/wave-lines-a.svg)` }}
       />
       <div className="relative mx-auto w-full max-w-6xl px-6 py-16 md:px-10">
-        <SectionHeading
-          index="01"
-          label={executiveSummary.label}
-          compact
-        />
+        <SectionHeading label={executiveSummary.label} compact />
 
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="flex lg:col-span-5">
