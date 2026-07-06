@@ -164,7 +164,7 @@ export default function CareerRoadmap() {
       />
       <div className="flex min-h-full flex-col justify-center">
         <div className="relative mx-auto w-full max-w-6xl px-6 pt-6 pb-20 md:px-10">
-          <SectionHeading index="02" label="Career Roadmap" compact />
+          <SectionHeading label="Career Roadmap" compact />
 
           <div>
             <div className="mb-5 hidden h-px bg-line sm:block">

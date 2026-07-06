@@ -180,8 +180,7 @@ export const careerRoadmap = [
 export const engagements = [
   {
     id: "housing-finance",
-    index: "01",
-    title: "Commercial Due Diligence for an Affordable Housing Finance Company",
+    title: "Commercial Due Diligence on an Affordable Housing Finance Company",
     tags: ["Private Equity", "Commercial Due Diligence", "Financial Services"],
     situation:
       "A leading private equity firm was evaluating an investment in an affordable housing finance company and required a deeper assessment of its commercial viability, underwriting quality, operational practices, and long-term growth potential before proceeding with the acquisition.",
@@ -203,8 +202,7 @@ export const engagements = [
   },
   {
     id: "b2b-saas",
-    index: "02",
-    title: "Commercial Due Diligence for a B2B SaaS Company",
+    title: "Commercial Due Diligence on a B2B SaaS Company",
     tags: ["Private Equity", "Commercial Due Diligence", "SaaS"],
     situation:
       "Conducted commercial due diligence for a leading B2B SaaS company by assessing market attractiveness, competitive positioning, regulatory compliance, and commercial scalability across North America, EMEA, and APAC.",
@@ -225,8 +223,7 @@ export const engagements = [
   },
   {
     id: "fintech-lending",
-    index: "03",
-    title: "Commercial Due Diligence for a FinTech Lending Platform",
+    title: "Commercial Due Diligence on a FinTech Lending Platform",
     tags: ["Private Equity", "Commercial Due Diligence", "FinTech"],
     situation:
       "Evaluated a digital lending platform's underwriting model, customer acquisition strategy, operational processes, and portfolio quality to assess commercial attractiveness and identify investment risks.",
@@ -248,8 +245,7 @@ export const engagements = [
   },
   {
     id: "healthcare-provider",
-    index: "04",
-    title: "Operational & Integrity Due Diligence for a Healthcare Provider",
+    title: "Operational & Integrity Due Diligence on a Healthcare Provider",
     tags: ["Private Equity", "Investigative Due Diligence", "Healthcare"],
     situation:
       "Conducted operational and integrity due diligence to evaluate governance practices, financial integrity, and reputational risks before acquisition through investigative research and forensic document reviews.",
