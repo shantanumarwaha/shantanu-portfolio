@@ -98,7 +98,7 @@ function DetailPanel({ step }: { step: Step }) {
           <h4 className="text-xs tracking-[0.15em] text-accent uppercase">
             Role Overview
           </h4>
-          <p className="mt-2 text-justify text-lg leading-relaxed text-foreground/90">
+          <p className="mt-2 text-lg leading-relaxed text-foreground/90">
             {step.roleOverview}
           </p>
 
@@ -135,7 +135,7 @@ function DetailPanel({ step }: { step: Step }) {
           </div>
 
           <div className="mt-4 border-l-2 border-accent/60 pl-5">
-            <p className="text-justify font-display text-lg leading-snug text-foreground/90 italic">
+            <p className="font-display text-lg leading-snug text-foreground/90 italic">
               &ldquo;{step.takeaway}&rdquo;
             </p>
           </div>
