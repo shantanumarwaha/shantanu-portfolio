@@ -521,7 +521,7 @@ export default function JourneyGlobe() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden bg-[radial-gradient(130%_120%_at_50%_32%,_#12161d_0%,_#0a0c11_44%,_#06070a_100%)] md:left-1/2">
+    <div className="absolute inset-0 overflow-hidden bg-[radial-gradient(130%_120%_at_50%_32%,_#12161d_0%,_#0a0c11_44%,_#06070a_100%)]">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 hidden h-full w-full lg:block"
